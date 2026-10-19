@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СтройМат — строительные материалы в Бишкеке</title>
+<meta name="description" content="OSB, фанера, ламинат, гипсокартон, шпаклёвки и профили. Оптовые цены, доставка по Бишкеку, калькулятор материалов.">
+<meta name="theme-color" content="#D4500A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23D4500A'/%3E%3Cpath d='M8 22V10h5l3 7 3-7h5v12' stroke='%23fff' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="index.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HardwareStore","name":"СтройМат","telephone":"+996775853838","email":"info@stroymat.kg","address":{"@type":"PostalAddress","streetAddress":"ул. Асаналиева, 5/6е","addressLocality":"Бишкек","addressCountry":"KG"},"openingHours":"Mo-Sa 08:00-18:00"}</script>
+<!-- Аналитика без cookie (self-hosted, из awesome-selfhosted): Umami или Plausible. Раскомментируйте и вставьте свой адрес:
+<script defer src="https://ВАШ-UMAMI/script.js" data-website-id="ID"></script> -->
+</head>
+<body>
+<header id="hd"></header>
+
+<main>
+<section class="hero">
+  <div class="wrap hg">
+    <div>
+      <h1>Материалы для ремонта. Количество посчитаем за минуту.</h1>
+      <p>OSB, фанера, ламинат, гипсокартон, шпаклёвки и профили. Оптовые цены и доставка по городу в день заказа или на следующий рабочий день.</p>
+      <div class="acts">
+        <a href="catalog.html" class="btn">Открыть каталог</a>
+        <a href="#contacts" class="btn o">Оставить заявку</a>
+      </div>
+    </div>
+    <div class="calc">
+      <h3>Сколько материала нужно</h3>
+      <label for="cm">Материал</label><select id="cm"></select>
+      <div class="row">
+        <div><label for="ca">Площадь, м²</label><input id="ca" type="number" min="0" step="0.5" value="24" inputmode="decimal"></div>
+        <div><label for="cr">Запас</label><select id="cr"><option value="0">Без запаса</option><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option></select></div>
+      </div>
+      <div class="res"><div><small>Вам понадобится</small><b id="cu">—</b><small id="cs"></small></div><button class="btn s" id="cadd">Добавить в заявку</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Что есть в наличии</h2>
+    <p class="sub">Выберите раздел — внутри поиск и сортировка по цене.</p>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Как заказать</h2>
+    <div class="steps">
+      <div><h3>Соберите заявку</h3><p>Посчитайте количество в калькуляторе и добавьте позиции из каталога.</p></div>
+      <div><h3>Отправьте нам</h3><p>Одной кнопкой в WhatsApp или через форму. Мы назовём точную цену и наличие.</p></div>
+      <div><h3>Получите доставку</h3><p>Привезём по городу в день заказа или на следующий рабочий день.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about">
+  <div class="wrap two">
+    <div>
+      <h2>О нас</h2>
+      <p class="sub">Работаем напрямую с производителями, поэтому держим оптовые цены и подскажем, что выбрать под вашу задачу: от чернового пола до финишной отделки стен.</p>
+    </div>
+    <div class="facts">
+      <div><div class="num">500+</div><span>наименований</span></div>
+      <div><div class="num">1000+</div><span>клиентов</span></div>
+      <div><div class="num">1 день</div><span>доставка по городу</span></div>
+      <div><div class="num">Пн–Сб</div><span>с 8:00 до 18:00</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap two">
+    <div>
+      <h2>Контакты</h2>
+      <div class="ci">
+        <div><small>Адрес</small>г. Бишкек, ул. Асаналиева, 5/6е</div>
+        <div><small>Телефон</small><a href="tel:+996775853838">+996 775 853 838</a></div>
+        <div><small>Email</small><a href="mailto:info@stroymat.kg">info@stroymat.kg</a></div>
+      </div>
+      <div class="acts" style="margin-top:24px">
+        <a class="btn s" href="tel:+996775853838">Позвонить</a>
+        <a class="btn o s" href="https://wa.me/996775853838" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn o s" href="https://2gis.kg/bishkek/geo/70030076913990963/72.136902,40.269518" target="_blank" rel="noopener">2GIS</a>
+      </div>
+      <!-- Бесплатная карта OpenStreetMap (из Free-for-dev). -->
+      <iframe class="map" loading="lazy" title="Карта" src="https://www.openstreetmap.org/export/embed.html?bbox=72.1269%2C40.2635%2C72.1469%2C40.2755&amp;layer=mapnik&amp;marker=40.269518%2C72.136902"></iframe>
+    </div>
+    <div>
+      <h2>Оставить заявку</h2>
+      <p class="sub">Если в заявке уже есть материалы, они добавятся к сообщению.</p>
+      <form id="cf" novalidate>
+        <label for="name">Имя</label><input id="name" name="name" autocomplete="name" placeholder="Алексей">
+        <span class="err" id="e-name">Введите имя, минимум 2 буквы</span>
+        <label for="phone">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+996 775 853 838">
+        <span class="err" id="e-phone">Введите номер телефона полностью</span>
+        <label for="message">Сообщение</label><textarea id="message" name="message" rows="4" placeholder="Какие материалы вас интересуют?"></textarea>
+        <span class="err" id="e-message">Напишите, что вам нужно</span>
+        <button class="btn" style="margin-top:16px" type="submit">Отправить заявку</button>
+      </form>
+      <div class="ok" id="ok">Заявка отправлена. Ответим в рабочее время.</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="ft"></footer>
+<script src="app.js"></script>
+</body>
+</html>
