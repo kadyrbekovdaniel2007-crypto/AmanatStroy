@@ -81,12 +81,12 @@ const waLink = text => `https://wa.me/${CFG.phone}?text=${encodeURIComponent(tex
 const NAV = [['index.html', 'Главная'], ['catalog.html', 'Каталог'], ['index.html#about', 'О нас'], ['index.html#contacts', 'Контакты']];
 function layout() {
   const cur = location.pathname.endsWith('catalog.html') ? 'catalog.html' : 'index.html';
-  $('#hd').innerHTML = `<div class="wrap bar"><a class="logo" href="index.html">Строй<b>Мат</b></a>
+  $('#hd').innerHTML = `<div class="wrap bar"><a class="logo" href="index.html">Аманат<b>Строй</b></a>
   <nav>${NAV.map(([h, t]) => `<a href="${h}"${h === cur ? ' class="on"' : ''}>${t}</a>`).join('')}</nav>
   <div class="tools"><button class="ic" id="th" aria-label="Сменить тему">◐</button>
   <button class="ic" id="cb" aria-label="Открыть заявку"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg><i id="cn" data-n="0">0</i></button>
   <button class="ic burger" id="bg" aria-label="Меню">☰</button></div></div>`;
-  $('#ft').innerHTML = `<div class="wrap fb"><a class="logo" href="index.html">Строй<b>Мат</b></a><span>© ${new Date().getFullYear()} СтройМат</span><div>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}</div></div>`;
+  $('#ft').innerHTML = `<div class="wrap fb"><a class="logo" href="index.html">Аманат<b>Строй</b></a><span>© ${new Date().getFullYear()} АманатСтрой</span><div>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}</div></div>`;
   document.body.insertAdjacentHTML('beforeend', `<div class="ov" id="ov"></div><aside class="dr" id="dr" aria-label="Заявка"><div class="dh"><h3>Ваша заявка</h3><button class="ic" id="dx" aria-label="Закрыть">✕</button></div><div class="dl" id="dl"></div>
   <div class="df"><div class="tot">Ориентировочно: <b id="dt"></b></div><small>Цены «от». Точную сумму и наличие назовём в ответ.</small><button class="btn" id="ds">Отправить в WhatsApp</button><button class="lnk" id="dc">Очистить заявку</button></div></aside><div class="ts" id="ts" role="status"></div>`);
   const th = store.get('theme', matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
